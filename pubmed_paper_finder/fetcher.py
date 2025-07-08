@@ -3,7 +3,7 @@ from typing import List, Dict
 
 # Constants for the PubMed API
 BASE_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
-EMAIL = "trishatree2307@gmail.com"  # Replace with your email (required by PubMed API)
+EMAIL = "trishatree2307@gmail.com"  
 
 def fetch_pubmed_ids(query: str, retmax: int = 20) -> List[str]:
     """Fetch PubMed IDs for a given query."""
@@ -31,4 +31,4 @@ def fetch_pubmed_details(paper_ids: List[str]) -> List[Dict]:
     }
     response = requests.get(url, params=params)
     response.raise_for_status()
-    return response.text  # We'll parse this XML later
+    return response.text  
